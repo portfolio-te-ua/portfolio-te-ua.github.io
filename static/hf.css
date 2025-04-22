@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("../static/fonts/ProximaSoft-Bold.woff2") format("woff2");
+  font-weight: 700;  /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("../static/fonts/ProximaSoft-SemiBold.woff2") format("woff2");
+  font-weight: 600;  /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("../static/fonts/ProximaSoft-Medium.woff2") format("woff2");
+  font-weight: 500;  /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("../static/fonts/ProximaSoft-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("../static/fonts/ProximaSoft-Light.woff2") format("woff2");
+  font-weight: 300;  /* Light */
+  font-style: normal;
+}
+
+body {
+  background-image: url("./images/Background.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: "Proxima Soft";
+}
+
+p {
+  font-weight: 400;
+  font-family: "Proxima Soft";
+  font-size: 18;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.image {
+  box-shadow: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin-right: 1%;
+  filter: saturate(0.3);
+  filter:drop-shadow(3)
+}
+
+h1 {
+  font-family: "Proxima Soft";
+  font-weight: 600;
+  font-size: 56;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 7px;
+}
+
+h2 {
+  font-family: "Proxima Soft";
+  font-weight: 400;
+  font-size: 24;
+  text-align: left;
+  margin-left: 4%;
+  margin-right: 2%;
+}
+
+h3:not(.card-content h3) {
+  font-weight: 500;
+  font-size: 28;
+  margin-left: 3%;
+  text-align: center;
+}
+
+.card-scroll-container {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  position: relative;
+  margin: 2%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  justify-content: space-between;
+  margin-right: 0.75%;
+  margin-left: 0.75%;
+  border-style: dotted;
+  border-width: 0.2px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 1%;
+  width: 80%
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 200px;
+  background-color: #210561;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card2 {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 200px;
+  background-color: #210561;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0 0.7%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-button {
+  background-color: rgba(54, 54, 54, 0.863);
+  color: #ffffff;
+  border-radius: 500px;
+  padding: 0.7% 2%;
+  font-size: 36;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: rgba(80, 79, 79, 0.863)
+}
+
+.scroll-button:active {
+  background-color: rgba(48, 47, 47, 0.863)
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  justify-items: stretch;
+  gap: 1%;
+  margin: 3.5%;
+}
+
+.button-container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  justify-items: stretch;
+  gap: 1%;
+  margin: 0;
+}
+
+.custom-button {
+  display: inline-block;
+  background-color: #1abc9c;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
+  background-color: #16a085;
+  color: #f53c3c
+}
+
+.custom-button:active {
+  transform: scale(0.95);
+  background-color: #12876f;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-items: center;
+  align-items: center;
+  height: 30%;
+  margin-top: 7%;
+}
+
+.card-content h3 {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 3px;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.card-content p {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  margin-left: 0.5%;
+  margin-bottom: 0;
+}
+
+/*.card-content a {
+  position: relative;
+  color: #1ca78b;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.card-content a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #1abc9c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.card-content a:hover {
+  color: #1abc9c;
+}
+
+.card-content a:hover::after {
+  transform: scaleX(1);
+}

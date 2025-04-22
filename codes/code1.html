@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>code1</title>
+        <link rel="stylesheet" href="static/hf2.css">
+        <script src="./Js/Script1.js"></script>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <h1>Here's a code:</h1>
+            <button class="copy-button" onclick="copyToClipboard()">Копіювати</button>
+            <button class="copy-button" onclick="ret()">На головну</button>
+        </div>
+        <div class="codespace">
+            <pre id="code-block">
+                <code>
+import java.util.Random;
+import java.util.Scanner;
+                
+class Game {
+    void startGameUA() {
+        Random x = new Random();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Вгадайте число вiд 1 до 5: ");
+        int input = scanner.nextInt();
+        int number = x.nextInt(1, 6);
+                
+        while (input != number) {
+            System.out.println("Неправильно, спробуйте ще: ");
+            input = scanner.nextInt();
+        }
+        System.out.println("Ви вгадали!");
+        restartGameUA();
+        scanner.close();
+    }
+    void closeTerminal() {
+        System.exit(0);
+    }
+                
+    void startGameRU() {
+        Random x = new Random();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Угадайте число от 1 до 5: ");
+        int input = scanner.nextInt();
+        int number = x.nextInt(1, 6);
+                
+        while (input != number) {
+            System.out.println("Неправильно, попробуйте еще: ");
+            input = scanner.nextInt();
+        }
+        System.out.println("Вы угадали!");
+        restartGameRU();
+        scanner.close();
+    }
+    void restartGameRU() {
+        System.out.println("Хотите сыграть еще раз? (y/n)");
+        try (Scanner a = new Scanner(System.in)) {
+            String input = a.nextLine();
+            if (input.equals("y")) {
+                selectLanguage();
+            }
+            if (input.equals("n")) {
+                System.out.println("До свидания!");
+                closeTerminal();
+            } else {
+                System.out.println("Неправильный ввод, попробуйте еще раз: ");
+                restartGameRU();
+            }
+        }
+    }
+    void startGameEN() {
+        Random x = new Random();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Guess the number from 1 to 5: ");
+        int input = scanner.nextInt();
+        int number = x.nextInt(1, 6);
+                
+        while (input != number) {
+            System.out.println("Wrong, try again: ");
+            input = scanner.nextInt();
+        }
+        System.out.println("You guessed!");
+        restartGameEN();
+        scanner.close();
+    }
+    void restartGameUA() {
+        System.out.println("Хочете зiграти ще раз? (y/n)");
+        try (Scanner a = new Scanner(System.in)) {
+            String input = a.nextLine();
+            if (input.equals("y")) {
+                selectLanguage();
+            }
+            if (input.equals("n")) {
+                System.out.println("До побачення!");
+                closeTerminal();
+            } else {
+                System.out.println("Неправильний ввiд, спробуйте ще раз: ");
+                restartGameUA();
+            }
+        }
+    }
+                
+    void restartGameEN() {
+        System.out.println("Do you want to play again? (y/n)");
+        try (Scanner a = new Scanner(System.in)) {
+            String input = a.nextLine();
+            if (input.equals("y")) {
+                selectLanguage();
+            }
+            if (input.equals("n")) {
+                System.out.println("До побачення!");
+                closeTerminal();
+            } else {
+                System.out.println("Неправильний ввiд, спробуйте ще раз: ");
+                restartGameUA();
+            }
+        }
+    }
+                
+    void selectLanguage() {
+        System.out.println("----------------------------------------");
+        System.out.println("          Guess the number game          ");
+        System.out.println("            Made by: @HTMLbro                ");
+        System.out.println("----------------------------------------");
+        System.out.println("Select language(1-3): ");
+        System.out.println("---");
+        System.out.println("1. Українська(Ukrainian)");
+        System.out.println("---");
+        System.out.println("2. English");
+        System.out.println("---");
+        System.out.println("3. Русский(Russian)");
+        Scanner w = new Scanner(System.in);
+        System.out.print(">");
+        int input = w.nextInt();
+        if (input == 1) {
+            System.out.println("Ви обрали українську мову");
+            startGameUA();
+        }
+        if (input == 3) {
+            System.out.println("Вы выбрали русский язык");
+            startGameRU();
+        }
+        if (input == 2) {
+            System.out.println("You have selected English language");
+            startGameEN();
+        } else {
+            System.out.println("Неправильний ввiд, спробуйте ще раз: ");
+            selectLanguage();
+            w.close();
+        }
+    }
+}
+                
+class StartGame {
+    public static void main(String[] args) {
+        Game game = new Game();
+        game.selectLanguage();
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </body>   
+</html>

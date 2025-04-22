@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>code1</title>
+        <link rel="stylesheet" href="static/hf2.css">
+        <script src="./Js/Script1.js"></script>
+    </head>
+
+    <body>
+        <h1>Here's a code:</h1>
+        <div class="button-container">
+            <button class="copy-button" onclick="copyToClipboard()">Копіювати</button>
+            <button class="copy-button" onclick="ret()">На головну</button>
+        </div>
+        <div class="codespace">
+            <pre id="code-block">
+                <code>
+import time
+import subprocess
+import tkinter as tk
+from tkinter import messagebox
+                    
+def shutdown_system():
+    root.destroy()
+    messagebox.showwarning("Shutdown", "Зараз ваш комп'ютер буде вимкнено через 10 секунд.")
+    subprocess.call(["shutdown", "/s", "/t", "10"])
+    time.sleep(5)
+    subprocess.call(["shutdown", "/a"]) # Cancel the shutdown after 5 seconds
+    messagebox.showinfo("Shutdown Cancelled", "Жартую! Гарного дня! :)")
+                        
+root = tk.Tk()
+root.geometry("1x1")
+                           
+shutdown_system()
+                    
+                </code>
+            </pre> 
+        </div>
+    </body>  
+</html>

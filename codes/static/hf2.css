@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("./fonts/ProximaSoft-SemiBold.woff2") format("woff2");
+  font-weight: 600;  /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("./fonts/ProximaSoft-Medium.woff2") format("woff2");
+  font-weight: 500;  /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("./fonts/ProximaSoft-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: "Proxima Soft";
+  src: url("fonts/ProximaSoft-Light.woff2") format("woff2");
+  font-weight: 300;  /* Light */
+  font-style: normal;
+}
+
+body {
+  font-family: "Proxima Soft";
+  background-color: #0e002e;
+  color: #ffffff;
+}
+
+.codespace {
+  display: block;
+  border-style: ridge;
+  padding-left: 1%
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: flex-end;
+  gap: 0.15%;
+  margin: 0.1%
+}
+
+.button-container h1 {
+  font-family: "Proxima Soft";
+  font: 48;
+  font-weight: 600;
+  margin: 2%;
+  text-align: left;
+  align-self: flex-start;
+  justify-self: "first baseline";
+}
+
+.copy-button {
+  font-size: 6;
+  font-weight: 300;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  max-width: 200px;
+  width: 100%;
+  font-weight: bold;
+  color: #000000;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+    color: #f53c3c;
+}
+
+.copy-button:active {
+    background-color: #12876f;
+    transform: scale(0.95);
+}
