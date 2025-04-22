@@ -1,0 +1,41 @@
+import tkinter
+import time
+
+current_time = time.ctime()
+current_date = time.strftime("%Y-%m-%d")
+root = tkinter.Tk()
+root.geometry("400x300")
+root.title("Time Display")
+root.configure(bg="#3e4042")
+root.resizable(False, False)
+
+def update_time(): 
+    global current_time
+    current_time = time.strftime("%H:%M:%S")
+    label_time.config(text=current_time)
+    root.after(1000, update_time)
+def update_date():
+    global current_date
+    current_date = time.strftime("%Y-%m-%d")
+    label_date.config(text=current_date)
+    root.after(1000, update_date)
+
+    
+label = tkinter.Label(root, text="Годинник:", font=("Arial", 20), fg="white", bg="#3e4042")
+label_time = tkinter.Label(root, text=current_time, font=("Sans", 20), fg="white", bg="#3e4042")
+label_date = tkinter.Label(root, text=current_date, font=("Sans", 20), fg="white", bg="#3e4042")
+close_button = tkinter.Button(root, text="Close", command=root.quit, font=("Georgia", 20), fg="white", bg="#3e4042")
+
+label.pack(pady=10)
+label_time.pack(pady=5)
+label_date.pack(pady=5)
+close_button.pack(side="right", padx = 5, pady=54)
+
+update_time()
+update_date()
+root.mainloop()
+
+
+
+
+
