@@ -192,13 +192,12 @@ h3:not(.card-content h3) {
   padding: 7px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .custom-button:hover {
   transform: scale(1.05);
   background-color: #16a085;
-  color: #f53c3c
 }
 
 .custom-button:active {
