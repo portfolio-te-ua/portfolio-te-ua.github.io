@@ -33,6 +33,37 @@
   font-style: normal;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Змінити фонове зображення для мобільних */
+  }
+  
+  h1 {
+    font-size: 32px; /* Зменшити заголовки */
+    margin-top: 20px;
+  }
+
+  .container {
+    flex-direction: column; /* Змінити напрямок на вертикальний */
+    gap: 10px; /* Зменшити відстані між елементами */
+  }
+
+  .card-container {
+    flex-direction: column; /* Вертикальне розташування карток */
+    width: 100%; /* Розтягнути картки на всю ширину */
+    overflow-x: visible; /* Вимкнути горизонтальний скрол */
+  }
+
+  .card {
+    width: 90%; /* Зменшити ширину карток */
+    margin: 10px auto; /* Центрувати картки */
+  }
+
+  .scroll-button {
+    display: none; /* Приховати кнопки прокрутки */
+  }
+}
+
 body {
   background-image: url("./images/Background.jpg"); 
   background-size: cover;
