@@ -19,17 +19,6 @@
   font-style: normal;
 }
 
-@media (max-width: 768px){
-  body {
-    font-size:14
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap
-    flex-direction: column;
-}
-
-
 @font-face {
   font-family: "Proxima Soft";
   src: url("../static/fonts/ProximaSoft-Regular.woff2") format("woff2");
