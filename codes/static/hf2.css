@@ -72,13 +72,12 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .copy-button:hover {
     background-color: #16a085;
     transform: scale(1.05);
-    color: #f53c3c;
 }
 
 .copy-button:active {
