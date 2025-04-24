@@ -33,37 +33,6 @@
   font-style: normal;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-size: contain; /* Змінити фонове зображення для мобільних */
-  }
-  
-  h1 {
-    font-size: 32px; /* Зменшити заголовки */
-    margin-top: 20px;
-  }
-
-  .container {
-    flex-direction: column; /* Змінити напрямок на вертикальний */
-    gap: 10px; /* Зменшити відстані між елементами */
-  }
-
-  .card-container {
-    flex-direction: column; /* Вертикальне розташування карток */
-    width: 100%; /* Розтягнути картки на всю ширину */
-    overflow-x: visible; /* Вимкнути горизонтальний скрол */
-  }
-
-  .card {
-    width: 90%; /* Зменшити ширину карток */
-    margin: 10px auto; /* Центрувати картки */
-  }
-
-  .scroll-button {
-    display: none; /* Приховати кнопки прокрутки */
-  }
-}
-
 body {
   background-image: url("./images/Background.jpg"); 
   background-size: cover;
@@ -85,10 +54,26 @@ p {
   gap: 15px;
 }
 
+@media (max-width: 768px) {
+  .image {
+    box-shadow: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    height: 60px;
+    width: auto;
+    margin-right: 1%;
+    margin-top: 2.2%;
+    filter: saturate(0.3);
+    filter:drop-shadow(3)
+  }
+}
+
 .image {
   box-shadow: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
+  height: 280px;
+  width: auto;
   margin-right: 1%;
+  margin-top: 2%;
   filter: saturate(0.3);
   filter:drop-shadow(3)
 }
@@ -101,7 +86,6 @@ h1 {
   margin-bottom: 30px;
   margin-top: 7px;
 }
-
 h2 {
   font-family: "Proxima Soft";
   font-weight: 400;
@@ -223,12 +207,13 @@ h3:not(.card-content h3) {
   padding: 7px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .custom-button:hover {
   transform: scale(1.05);
   background-color: #16a085;
+  color: #f53c3c
 }
 
 .custom-button:active {
@@ -272,11 +257,18 @@ h3:not(.card-content h3) {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 a {
   margin-left: 0.5%;
   margin-bottom: 0;
+  color: #1abc9c;
+  text-align: center;
+}
+
+.footer1 {
+  margin: 0
 }
 
 /*.card-content a {
